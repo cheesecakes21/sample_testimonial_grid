@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ecf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+#testimonial-container {
+    padding: 5% 3%;
+}
+
+#testimonial-1 {
+    background-color: #7541c8;
+    color: white;
+    z-index: 0;
+    position: relative;
+
+}
+
+#testimonial-2 {
+    background-color: #48556a;
+    color: white;
+}
+
+#testimonial-3, #testimonial-5 {
+    background-color: white;
+    color: #1b2126;
+}
+
+#testimonial-4 {
+    background-color: #19212e;
+    color: white;
+}
+
+.grid-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px black(1,1,1,2);
+    font-size: 13px;
+}
+
+#quote {
+    position: absolute;
+    right:2%;
+    top: 0;
+    z-index: -1;
+}
+
+.grid-item h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.grid-item p {
+    opacity: 70%;
+}
+
+.header .name {
+  opacity: 100%;
+  font-size: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    z-index: 3;
+    position: relative;
+}
+
+.header img {
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+}
+
+@media (min-width: 576px) {
+    #testimonial-container {
+        display: flex;
+        max-width: 1440px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    #testimonial-5 {
+        flex-basis: 28%;
+    }
+
+    #main-left {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 70%;
+
+    }
+
+    #top {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+
+    #bottom {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+
+    #testimonial-1 {
+        /* we can also use a simple combination selector=> (#main-left .grid-item) and give the children selected a margin-right: 35%; that's if we do not want to use the properties of a flex box i.e. justify-content andf flex-basis.*/
+        flex-basis: 63%;
+    }
+
+    #testimonial-2 {
+        flex-basis: 35%;
+    }
+
+    #testimonial-3 {
+        flex-basis: 35%;
+    }
+
+    #testimonial-4 {
+        flex-basis: 63%;
+    }
+}
